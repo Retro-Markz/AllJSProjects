@@ -158,5 +158,11 @@ console.log(author, title, genres, pages);
 // const primaryGenre = genres[0];
 // const secondaryryGenre = genres[1];
 
-const [primaryGenre, secondaryryGenre] = genres;
-console.log(primaryGenre, secondaryryGenre);
+const [primaryGenre, secondaryryGenre, ...otherGenres] = genres; //rest operator ... 3 dots in the last
+
+console.log(primaryGenre, secondaryryGenre, otherGenres);
+
+const newGenres = [...genres, "epic fantasy"]; //spread operator ... at the init to add new elements to array
+newGenres;
+
+const updatedBooks = { book, moviePublicationDate: "2001-12-19" };
