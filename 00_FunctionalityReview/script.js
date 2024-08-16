@@ -191,5 +191,24 @@ console.log(`The book has ${pagesRange}`);
 
 console.log(true && "Some String");
 console.log(false && "Some String");
+console.log(hasMovieAdaptation && "This book has a movie");
+console.log(!hasMovieAdaptation && "This movie has a movie");
+console.log("Jonas" && "Some String");
+console.log(0 && "Some String");
+
 console.log(true || "Some String");
 console.log(false || "Some String");
+
+console.log(book.translations.spanish);
+
+const spanishTranlation = book.translations.spanish || "NOt translated";
+spanishTranlation;
+
+console.log(book.reviews.librarything.reviewsCount);
+
+const countWrong = book.reviews.librarything.reviewsCount || "No data";
+
+countWrong;
+
+const count = book.reviews.librarything.reviewsCount ?? "No data";
+count;
