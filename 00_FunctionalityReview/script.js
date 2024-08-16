@@ -224,7 +224,6 @@ function getTotalReviewCount(book) {
 console.log(getTotalReviewCount(book));
 
 
-*/
 
 //map, ,filter and reduce
 
@@ -304,3 +303,21 @@ const booksAterUpdate = booksAfterDelete.map((book) =>
 );
 
 booksAterUpdate;
+
+*/
+
+const API = "https://jsonplaceholder.typicode.com/todos";
+
+// fetch(API)
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
+
+async function getTodos() {
+  const res = await fetch(API);
+  const data = await res.json();
+  console.log(data);  
+}
+
+getTodos();
+
+
