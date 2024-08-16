@@ -188,3 +188,8 @@ const pagesRange = pages > 1000 ? "over a thousand" : "less than one thousand";
 pagesRange;
 
 console.log(`The book has ${pagesRange}`);
+
+console.log(true && "Some String");
+console.log(false && "Some String");
+console.log(true || "Some String");
+console.log(false || "Some String");
