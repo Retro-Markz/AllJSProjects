@@ -280,4 +280,27 @@ a;
 const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
 sortedByPages;
 
-//inmutale arrays
+//inmutable arrays
+
+//add book objet to array
+const newBook = {
+  id: 6,
+  title: "Harry poter and the chamber of secrets",
+  author: "J. K. Rowling",
+};
+
+const booksAfterAdd = [...books, newBook];
+
+booksAfterAdd;
+
+//delete a book from array
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+booksAfterDelete;
+
+//update book objet in the array
+
+const booksAterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 1210 } : book
+);
+
+booksAterUpdate;
