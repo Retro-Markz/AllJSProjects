@@ -145,7 +145,7 @@ function getBook(id) {
 
 //destructuring data
 
-const book = getBook(2);
+const book = getBook(1);
 book;
 // const title = book.title;
 // const author = book.author;
@@ -165,4 +165,23 @@ console.log(primaryGenre, secondaryryGenre, otherGenres);
 const newGenres = [...genres, "epic fantasy"]; //spread operator ... at the init to add new elements to array
 newGenres;
 
-const updatedBooks = { book, moviePublicationDate: "2001-12-19" };
+const updatedBooks = {
+  ...book,
+  //adding a new property
+  moviePublicationDate: "2001-12-19",
+  //update an existing property
+  pages: 1210,
+};
+updatedBooks;
+
+const summary = `${title} is a book written by ${author} with ${pages} and published on ${
+  publicationDate.split("-")[0]
+}. the book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
+
+summary;
+
+const pagesRange = pages > 1000 ? "over a thousand" : "less than one thousand";
+
+pagesRange;
+
+console.log(`The book has ${pagesRange}`);
