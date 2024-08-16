@@ -173,10 +173,13 @@ const updatedBooks = {
   pages: 1210,
 };
 updatedBooks;
+const getYear = (str) => str.split("-")[0];
 
-const summary = `${title} is a book written by ${author} with ${pages} and published on ${
-  publicationDate.split("-")[0]
-}. the book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
+console.log(getYear(publicationDate));
+
+const summary = `${title} is a book written by ${author} with ${pages} and published on ${getYear(
+  publicationDate
+)}. the book has ${hasMovieAdaptation ? "" : "not"} been adapted as a movie`;
 
 summary;
 
