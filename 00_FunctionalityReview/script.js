@@ -145,7 +145,7 @@ function getBook(id) {
 
 //destructuring data
 
-const book = getBook(1);
+const book = getBook(3);
 book;
 // const title = book.title;
 // const author = book.author;
@@ -204,11 +204,20 @@ console.log(book.translations.spanish);
 const spanishTranlation = book.translations.spanish || "NOt translated";
 spanishTranlation;
 
-console.log(book.reviews.librarything.reviewsCount);
+//console.log(book.reviews.librarything.reviewsCount);
 
-const countWrong = book.reviews.librarything.reviewsCount || "No data";
+//const countWrong = book.reviews.librarything.reviewsCount || "No data";
 
-countWrong;
+//countWrong;
 
-const count = book.reviews.librarything.reviewsCount ?? "No data";
-count;
+//const count = book.reviews.librarything.reviewsCount ?? "No data";
+//count;
+
+//optional chaining (?) for the book 3, because has a undefined property
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+
+console.log(getTotalReviewCount(book));
