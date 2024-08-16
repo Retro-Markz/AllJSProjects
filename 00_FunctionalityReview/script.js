@@ -266,5 +266,18 @@ adventureBooks;
 
 //reduce
 
-const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
+const pagesAllBooks = books.reduce((sum, book) => sum + book.pages, 0);
 pagesAllBooks;
+
+//sort
+
+const a = [3, 5, 7, 4, 2];
+const sorted = a.slice().sort((a, b) => b - a);
+
+sorted;
+a;
+
+const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
+sortedByPages;
+
+//inmutale arrays
